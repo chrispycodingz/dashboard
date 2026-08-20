@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.page {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 6fr;
+}
+.sidebar {
+    border: 5px solid purple;
+    grid-row: span 2;
+}
+.main   {
+    display: grid;
+    border: 5px solid red;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+}
+.banner {
+    border: 5px solid blue;
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+}
+.row1 {
+    grid-column: span 2;
+    border: 5px solid pink;
+    display: flex;
+    gap: 10px;
+}
+.row2 {
+    display: flex;
+    gap: 10px;
+}
+.dashboard {
+   display: grid;
+   grid-template-rows: 1fr 3fr 3fr 3fr;
+   grid-template-columns: 4fr 1fr;
+}
+.cards {
+    display: grid;
+    border: 5px solid chartreuse;
+    
+}
