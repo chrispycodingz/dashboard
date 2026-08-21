@@ -29,13 +29,17 @@
     grid-template-rows: 1fr 6fr;
 }
 .sidebar {
-    border: 5px solid purple;
+    padding-top: 5px;
+    padding-right: 10px;
     grid-row: span 2;   
     padding-left: 10px;
+    background: cornflowerblue;
+    color: antiquewhite;
 }
-.menu li {
-    list-style-type: none;
+li img, .header img {
+    filter: brightness(0) saturate(100%) invert(98%) sepia(31%) saturate(541%) hue-rotate(313deg) brightness(101%) contrast(96%);
 }
+
 .menu  {
     padding-top: 10px;
     display: flex;
@@ -43,25 +47,65 @@
     gap: 10px;
 }
 .main   {
+    
     display: grid;
-    border: 5px solid red;
     grid-template-rows: subgrid;
     grid-row: span 2;
 }
 .banner {
-    border: 5px solid blue;
+    padding-left: 10px;
+    padding-right: 10px;
     display: grid;
     grid-template-columns: 4fr 2fr;
     align-items: center;
+    grid-template-rows: auto 1fr;
+    background-color:antiquewhite;
+    color: cornflowerblue;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
-.magnifying, .bell, .home, .account, .message, .history, .tasks, .communities, .settings, .support, .privacy {
+.banner img {
+    filter: invert(61%) sepia(31%) saturate(1512%) hue-rotate(196deg) brightness(97%) contrast(94%);
+}
+.magnifying, .bell, .home, .profile, .message, .history, .tasks, .communities, .settings, .support, .privacy {
     width: 20px;
+    aspect-ratio: 1;
+}
+.goobie, .blub , .goat {
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+.nav > li, .tools > li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+.projectsheader {
+    color: antiquewhite;
+    font-size: 25px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.header,  .projectsheader, .announceheader, .trendingheader {
+    font-style: italic;
+}
+.search {
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+.header {
+    display: flex;
+    align-items: center;
+}
+.header img {
+    width: 30px;
     aspect-ratio: 1;
 }
 
 .row1 {
+    padding-top: 15px;
     grid-column: span 2;
-    border: 5px solid pink;
     display: grid;
     grid-auto-flow: column;
     gap: 10px;
@@ -76,10 +120,12 @@
     display: grid;
     justify-content: flex-end;
     grid-auto-flow: column;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
+    white-space: nowrap;
+}
+.bell, .profilepic, .account {
     min-width: 0;
-    min-height: 0;
 }
 .row2 {
     display: grid;
@@ -88,52 +134,114 @@
     grid-auto-flow: column;
     gap: 10px;
     align-items: center;
-    border: 5px solid navajowhite;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 button {
     padding: 10px;
-    background-color: blue;
-    color: white;
+    background-color: cornflowerblue;
+    color: antiquewhite;
     border-radius: 20px;
 }
 .buttons {
-    border: 5px solid indianred;
+    
     gap: 10px;  
 }
 .dashboard {
    display: grid;
    grid-template-rows: 1fr 3fr 3fr 3fr;
    grid-template-columns: 4fr 1fr;
-   border: 5px solid coral;
+   
+   background-color: darksalmon;
 }
 .cards {
     display: grid;
-    border: 5px solid chartreuse;
+    padding-right: 10px;
+    padding-left: 10px;
     grid-template-rows: 2fr 2fr 2fr;
     grid-template-columns: 2fr 2fr;
     grid-row: 2 / -1;
     gap: 10px;
+    padding-bottom: 35px;
 }
 .card {
-    border: 5px solid brown;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03); 
+    border: 2.5px solid brown;
+    box-shadow: 0 2px 5px peachpuff;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 1.5;
 }
-.card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-}
+
 .projects {
     display: grid;
     grid-template-rows: subgrid;
-    border: 5px solid cornflowerblue;
+    
     grid-row: span 4;
 }
 .trendannounce {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03); 
     display: grid;
     grid-template-row: subgrid;
     grid-row: span 4;
-    border: 5px solid crimson;
 }
 .announcements, .trending {
     display: grid;
-    border: 5px solid palevioletred;
+    
+    background: antiquewhite;
+    color: cornflowerblue;
+    padding-left: 10px;
+}
+.card {
+    background-color: antiquewhite;
+    color: cornflowerblue;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.blah1, .blah2, .profile1, .profile2 {
+    border-bottom: 1px solid brown;
+    line-height: 1.5;
+}
+.blah2, .blah3, .profile2, .profile3 {
+    padding-top: 5px;
+    line-height: 1.5;
+}
+.profile1, .profile2, .profile3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+p, .crddescription {
+    padding-top: 2.5px;
+    font-size: 10px;
+}
+.card > .crddescription {
+    font-size: 15px;
+    font-weight: normal;
+}
+.subgoat, .subblub, .subgreeting {
+    display: flex;
+    flex-direction: column;
+}
+.bigpic {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    filter: none !important;
+}
+.smallpic {
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    filter: none !important;
+}
+.greeting {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.greetdetail {
+    font-size: 20px;
 }
